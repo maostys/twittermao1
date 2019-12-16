@@ -22,18 +22,7 @@ public class HelloAppEngine extends HttpServlet{
 	
 	private String getTweet(){
 		String tweets[] = {
-				"‰ÆŒn‚Æ‚¢‚Á‚½‚çç‰®‚Á‚µ‚å",
-				"’Ê‚ÍŒÅ‚ß‚Ì”Z‚¢‚ß",
-				"‚â‚Á‚Ï‚èªŠİ‚Ìç‰Æ‚ª‚¢‚¢‚æ‚ËB",
-				"M—Š‚Ì[–é‰c‹Æ",
-				"…—j‚Í’è‹x“ú‚È‚ñ‚¾‚æ‚È",
-				"‚Æ‚è‚ ‚¦‚¸ç‰Æs‚±‚¤‚º",
-				"ƒ†[Aƒ‰ƒCƒX•t‚¯‚¿‚á‚¤H",
-				"ƒ~ƒjƒJƒŒ[‚àˆÓŠO‚Æ”ü–¡‚µ‚¢‚º",
-				"ƒlƒM‚¤‚Ü‚·‚¬",
-				"‚ ‚ÌƒlƒM·Œ©‚é‚Æƒeƒ“ƒVƒ‡ƒ“‚ ‚ª‚Á‚¿‚á‚¤‚æ‚Ë[",
-				"‘å«‚Ü‚¶‚©‚Á‚¯‚¥",
-				"‚±‚±‚ÍHŒ”§‚Å‚·"
+				"aaa"
 		};
 		int randint = (int)(Math.random()*tweets.length);
 		return tweets[randint];
@@ -51,7 +40,7 @@ public class HelloAppEngine extends HttpServlet{
 		String message = getTweet();
 		Twitter twitter = new TwitterFactory(cb.build()).getInstance();
 		try {
-			//Twitter‚É‘‚«o‚µ
+			//Twitterï¿½Éï¿½ï¿½ï¿½ï¿½oï¿½ï¿½
 			twitter.updateStatus(message);
 		} catch (TwitterException e) {
 			logger.log(Level.SEVERE, "Twitter error", e);
